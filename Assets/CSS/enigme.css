@@ -1,0 +1,582 @@
+@font-face {
+    font-family: 'wakanda_foreverregular';
+    src: url('/Polices/wakandaforever-regular-webfont.woff2') format('woff2'),
+        url('/Polices/wakandaforever-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pantheraregular';
+    src: url('/Polices/pantheraregular-mvz9j-webfont.woff2') format('woff2'),
+        url('/Polices/pantheraregular-mvz9j-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'beynoregular';
+    src: url('/Polices/fontsfree-net-beyno-webfont.woff2') format('woff2'),
+        url('/Polices/beyno-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cantarellregular';
+    src: url('/Polices/cantarell-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #FFFFFF;
+    --gradient-white: #F2CEF2;
+    --purple-color: #9E91B7;
+    --pink-color: #DF99F2;
+    --bleue-color: #021740;
+    --gradient-bleue1: #3D2DA6;
+    --gradient-bleue2: #07338C;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url('/Assets/Illustrations + Logo/All pages/arrière_plan.png');
+    width: 100%;
+}
+
+p {
+    color: var(--white-color);
+    font-family: 'cantarellregular';
+}
+
+/*Design de la navigation*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav ul a {
+    font-family: 'beynoregular';
+    color: var(--purple-color);
+    font-size: 25px;
+    font-weight: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+ul a:link {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+ul a:visited {
+    text-decoration: none;
+    color: var(--purple-color);
+}
+
+nav ul a:hover {
+    color: var(--white-color);
+    text-decoration: underline;
+    padding-bottom: 3px;
+}
+
+nav .logo:hover {
+    filter: invert(22%) sepia(58%) saturate(2921%) hue-rotate(238deg) brightness(76%) contrast(102%);
+}
+/*design de la section du defi */
+#defi{
+    background-image: url('/ASSETS/Illustrations + Logo/Enigme/Pantherenigme1.png');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    width: 95%;
+    height: 700px;
+}
+
+#defi .content {
+    width: 50%;
+    height: 540px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    animation: fade-in ease-in-out 1s;
+}
+
+.content h2 {
+    font-family: 'beynoregular';
+    font-size: 43px;
+    color: var(--purple-color);
+    letter-spacing: 3px;
+    text-align: justify;
+    width: 60%;
+    margin-left: 10%;
+}
+
+.content .paragraphe {
+    background: url('//ASSETS/Illustrations + Logo/Enigme/Pantherenigme2.png') no-repeat, url('/ASSETS/Illustrations + Logo/Enigme/Pantherenigme3.png') no-repeat;
+    background-position: 0 0, 50px 90%;
+    background-size: contain;
+    height: 450px;
+    padding: 20%;
+}
+.content .paragraphe{
+    text-align: justify;
+}
+/*designe de la section enigme*/
+
+#enigme {
+    margin: 100px 0;
+    width: 85%;
+    position: relative;
+    left: 15%;
+}
+
+#enigme .sujet {
+    width: 55%;
+    margin: 30px 0;
+    animation: fade-in ease-in-out 1s;
+}
+
+/* enigme à resoudre */
+#enigme .sujet q {
+    font-family: 'wakanda_foreverregular' ;
+    font-size: calc(1rem + 1vw);
+    color: var(--purple-color);
+    font-weight: normal;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 1.5;
+}
+
+
+.content2 .sujet q::before, .content2 .sujet q::after {
+    content: none;
+}
+
+.flex-container {
+    display: flex;
+
+}
+
+/* partie de la transcription */
+.content2 .transcription .wakanda_font, .content2 .sujet q {
+    font-family: 'wakanda_foreverregular';
+    font-size: 20px;
+}
+
+/* conteneur du formulaire et de la transcription */
+.content2 .contenant {
+    flex: 1;
+}
+
+.content2 .transcription {
+    margin: 30px 0;
+    animation: fade-in ease-in-out 1s;
+}
+
+.content2 .transcription p:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+.content2 .contenant .formulaire {
+    margin: 160px 0 30px 0;
+}
+
+.content2 .contenant .formulaire p{
+    color: var(--white-color);
+}
+/* rendre les element de form en bloc */
+.content2 .contenant .formulaire * {
+    display: block;
+    font-family: 'cantarellregular';
+    font-size: calc(0.5rem + 0.5vw);
+
+}
+
+/* champ de reponse pour le formulaire */
+.content2 .formulaire textarea {
+    outline: none;
+    resize: none;
+    width: 85%;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 10px 0;
+    border: solid 2px;
+    color: #9e91b7;
+    background-color: transparent;
+}
+
+.content2 .formulaire textarea::placeholder {
+    color: #9e91b7;
+}
+/* bouton pour soumettre*/
+.submitBtn {
+    text-decoration: none;
+    display: block;
+    width: 130px;
+    text-align: center;
+    margin: 40px auto;
+    padding: 15px 0;
+    cursor: pointer;
+    background-color: var(--white-color);
+    border-radius: 38px;
+}
+
+.submitBtn a{
+    font-family: 'cantarellregular';
+    font-size: 15px;
+    color: var(--bleue-color);
+    font-weight: bolder;
+}
+
+.submitBtn:hover {
+    box-shadow:var(--white-color) 0 0 10px;
+}
+
+/* pop-up */
+.modal{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 16cm;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal:target{
+    visibility: visible;
+    opacity: 1;
+}
+.modalcontent{
+    font-family: 'cantarellregular';
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 40px;
+    width: 300px;
+    max-width: 80%;
+    border-radius: 30px;
+    position: relative;
+}
+.modalclose{
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--bleue-color);
+}
+
+
+/* conteneur aside */
+.content2 aside {
+    flex: 2;
+    background: url('/ASSETS/Illustrations + Logo/Enigme/Pantherenigme2.png') no-repeat;
+    background-position-x: 30%;
+    background-size: 80%;
+    animation: fade-in ease-in-out 1s;
+}
+
+.content2 aside h3 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: calc(0.5rem + 0.5vw);
+    margin-bottom: 7%;
+    text-align: center;
+
+}
+
+.content2 aside p {
+    text-align: center;
+}
+.aside-element h3{
+    color: var(--white-color);
+}
+.content2 aside .aside-element {
+    width: 50%;
+    position: relative;
+    top: 8vw;
+    left: 20%;
+}
+
+/* media querries */
+
+@media screen and (max-width:1530px) {
+    .defi h1 {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    section.defi {
+        margin: 0 auto;
+        background-position: center 0;
+        height: 100vw;
+    }
+
+    .defi>div {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+        position: relative;
+        left: 0;
+        top: 40vw;
+    }
+
+    .defi h1 {
+        margin: 0 100px;
+        text-align: center;
+        font-size: calc(2rem + 1.5vw);
+    }
+
+    .defi .paragraphe {
+        background-position: center 0, 50px 40vw;
+        height: 45vw;
+    }
+
+    section.enigme {
+        width: 95%;
+        margin: 0 auto;
+        left: 0;
+    }
+
+    .enigme .sujet {
+        width: 75%;
+    }
+
+    .enigme aside {
+        background-size: contain;
+        background-position-y: 50%;
+    }
+
+    .enigme aside .aside-element {
+        width: 70%;
+        top: 16vw;
+        top: 140px;
+        left: 15%;
+
+    }
+
+    .enigme .contenant .formulaire {
+        margin: 10vw 0 30px 0;
+    }
+
+    .enigme .formulaire button {
+        margin: 5vw auto;
+    }
+
+
+}
+
+@media screen and (max-width:704px) {
+    .defi h1 {
+        margin: 0 50px;
+    }
+
+    .enigme aside .aside-element {
+        top: 120px;
+    }
+
+}
+
+@media screen and (max-width:557px) {
+    .enigme aside .aside-element {
+        top: 110px;
+    }
+}
+
+@media screen and (max-width:547px) {
+    section.defi {
+        height: 110vw;
+    }
+
+    .defi>div {
+        width: 100%;
+    }
+
+    .defi h1 {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .defi .paragraphe {
+        background-size: 110%;
+        height: 60vw;
+        background-position: center 0, 50px 55vw;
+    }
+
+    .enigme aside {
+        background-size: 120%;
+    }
+
+    .enigme aside .aside-element {
+        width: 80%;
+        left: 13%;
+
+    }
+}
+
+/*Design de la partie footer*/
+
+.contentfoot p, a, li {
+    color: var(--white-color);
+    font-family: 'cantarellregular';
+    font-size: 10px;
+    list-style: none;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+footer h3 {
+    font-family: 'cantarellregular';
+    color: var(--white-color);
+    font-size: 22px;
+    letter-spacing: 28%;
+    margin: 5px 0 10px;
+}
+
+footer {
+    background: url('/ASSETS/Illustrations + Logo/All pages/back_footer.png') no-repeat;
+    background-size: 100% 100%;
+    border: solid 1px transparent;
+}
+
+.contentfoot {
+    margin: 200px 10% 50px;
+}
+/* Autres design*/
+.contentfoot {
+    display: grid;
+    grid-template-areas: 
+        "logo logo pages adress"
+        "logo logo pol pol";
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    }
+    
+    .imglogo {
+        width: 25vw;
+        height: 25vw;
+        min-width: 150px;
+        min-height: 150px;
+        background: url('/assets/Illustrations + Logo/All pages/footer1.png') no-repeat;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    
+    .bulle {
+        position: relative;
+        right: 2vw;
+        width: 12vw;
+        min-width: 75px;
+    }
+    
+    .imglogo:hover {
+        transform: scale(110%);
+    }
+    
+    .pages a:hover {
+        text-decoration: underline;
+    }
+    
+    .adress {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+    }
+   
+    .adress a{
+        text-decoration: none;
+    }
+    
+    .adress img {
+        max-width: 60px;
+        margin: 0 5px;
+    }
+    
+    .adress img:hover {
+        transform: scale(110%);
+    }
+    
+    .pol {
+        display: flex;
+        align-items: center;
+    }
+
+/* Media queries pour les petites écrans */
+@media screen and (max-width: 700px) {
+    .contentfoot {
+        margin: 100px 10px 50px;
+    }
+
+    .adress figure{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    figure img {
+        width: 5vw;
+    }
+    
+}
+
+/* Media Query pour les très petites écrans */
+@media screen and (max-width: 400px) {
+    .contentfoot {
+        display: grid;
+        grid-template-areas: 
+            "logo logo"
+            "pages adress" 
+            "pol pol";
+        gap: 15px;
+    }
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.pages {
+    grid-area: pages;
+}
+
+.adress {
+    grid-area: adress;
+}
+
+.pol {
+    grid-area: pol;
+}

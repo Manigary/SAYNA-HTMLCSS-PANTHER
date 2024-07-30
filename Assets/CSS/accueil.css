@@ -1,0 +1,673 @@
+@font-face {
+    font-family: 'wakanda_foreverregular';
+    src: url('/Polices/wakandaforever-regular-webfont.woff2') format('woff2'),
+        url('/Polices/wakandaforever-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pantheraregular';
+    src: url('/Polices/pantheraregular-mvz9j-webfont.woff2') format('woff2'),
+        url('/Polices/pantheraregular-mvz9j-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'beynoregular';
+    src: url('/Polices/fontsfree-net-beyno-webfont.woff2') format('woff2'),
+        url('/Polices/beyno-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cantarellregular';
+    src: url('/Polices/cantarell-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #FFFFFF;
+    --gradient-white: #F2CEF2;
+    --purple-color: #9E91B7;
+    --pink-color: #DF99F2;
+    --bleue-color: #021740;
+    --gradient-bleue1: #3D2DA6;
+    --gradient-bleue2: #07338C;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url('/Assets/Illustrations + Logo/All pages/arrière_plan.png');
+    width: 100%;
+}
+
+
+p {
+    color: var(--white-color);
+    font-family: 'cantarellregular';
+    font-size: 16px;
+}
+
+blockquote p {
+    color: var(--white-color);
+    font-family: 'cantarellregular';
+    font-size: 14px;
+}
+
+.ligne a {
+    text-decoration: none;
+}
+
+/* voir plus texte*/
+.ligne {
+    color: var(--white-color);
+    font-family: 'cantarellregular';
+    text-decoration: underline;
+}
+
+.barre {
+    position: fixed;
+    height: 500px;
+    left: 3%;
+    border-left: 5px solid var(--white-color);
+    opacity: 20%;
+}
+
+.barre2 {
+    height: 300px;
+    position: fixed;
+    left: 5%;
+    border-left: 5px solid var(--white-color);
+    opacity: 20%;
+}
+
+/* Partie navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav ul a {
+    font-family: 'beynoregular';
+    color: var(--purple-color);
+    font-size: 25px;
+    font-weight: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+
+ul a:link {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+ul a:visited {
+    text-decoration: none;
+    color: var(--purple-color);
+}
+
+nav ul a:hover {
+    color: var(--white-color);
+    text-decoration: underline;
+    padding-bottom: 3px;
+}
+
+nav .logo:hover {
+    filter: invert(22%) sepia(58%) saturate(2921%) hue-rotate(238deg) brightness(76%) contrast(102%);
+}
+
+/Design des scroll/
+.scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: fixed;
+    left: 72px;
+    top: 295px;
+}
+
+.social:hover {
+    filter: invert(22%) sepia(58%) saturate(0%) hue-rotate(238deg) brightness(100%) contrast(1000%);
+}
+
+.scroll .social {
+    margin-top: 15px;
+}
+
+/* Section 1 page d'acceuil*/
+
+.hero {
+    margin: 50px 5% 20px 10%;
+}
+
+.hero h1 {
+    font-family: 'pantheraregular';
+    font-size: 68px;
+    color: var(--purple-color);
+    padding-bottom: 10px;
+    line-height: 1;
+    /* Ajuster pour s'assurer qu'il n'y a pas de saut de ligne */
+    white-space: nowrap;
+    /* Empêche le texte de passer à la ligne suivante */
+}
+
+.hero h2 {
+    font-family: 'beynoregular';
+    font-size: 32px;
+    padding-bottom: 15px;
+    color: var(--purple-color);
+}
+
+.hero p {
+    text-align: justify;
+
+}
+
+.description {
+    margin-left: 15px
+}
+
+.imgBG img {
+    width: 100%;
+}
+
+/* media queries */
+@media screen and (min-width: 700px) {
+    .hero {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 10%;
+    }
+
+    .description {
+        width: 40%;
+    }
+
+    .imgBG {
+        width: 60%;
+    }
+}
+
+/* Section 2*/
+
+.perso {
+    margin-left: 10%;
+    background-color: var(--bleue-color);
+    max-width: 90%;
+}
+
+.perso h2 {
+    font-family: 'beynoregular';
+    font-size: 32px;
+    color: var(--purple-color);
+}
+
+.persofig {
+    display: flex;
+    max-width: 100%;
+}
+
+/* zoom sur image des personnages principaux */
+.persophoto img:hover {
+    transform: scale(110%);
+}
+
+.persophoto img {
+    max-height: 300px;
+}
+
+.descri2 {
+    padding-top: 1cm;
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.descri2 h2 {
+    padding-bottom: 10px;
+}
+
+/* Media queries */
+@media screen and (min-width: 1000px) {
+    .persofig {
+        grid-template-areas:
+            "sec2Img1 sec2Desc1 sec2Img2 sec2Desc2 sec2Img3";
+        column-gap: 10px;
+        grid-template-columns: 0.6fr 1.2fr 0.6fr 1.2fr 0.6fr;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .persofig {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+}
+
+/* Section centrale */
+.principal {
+    margin: 75px 2% 75px 10%;
+}
+
+
+/* Article de la section centrale */
+.artP {
+    margin: 40px 2% 0;
+    text-align: justify;
+}
+
+.artP h2 {
+    padding-top: 30px;
+    margin: 40px 2% 0;
+    font-family: 'beynoregular';
+    font-size: 32px;
+    color: var(--purple-color);
+}
+
+.artP p {
+    margin: 20px 2% 0;
+    text-align: justify;
+}
+
+/* Aside */
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1cm;
+}
+
+/* Conteneur et z-index */
+.fig {
+    text-align: center;
+    height: 175px;
+}
+
+.figimg {
+    height: 400px;
+    max-width: 250px;
+    z-index: 1;
+}
+
+/* éléments principaux de la partie aside */
+.descpt {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    color: black;
+    padding: 170px 10% 75px;
+    height: 20cm;
+}
+
+.descpt>*,
+.List ul li {
+    margin: 10px 0;
+    text-align: left;
+    color: var(--bleue-color);
+    line-height: 20px;
+}
+
+.figcaption {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.descpt li {
+    list-style: none;
+}
+
+/* Boutons violets de la partie Aside */
+.btn ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.btn ul li {
+    background-color: var(--gradient-bleue2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 2px;
+    color: var(--white-color);
+}
+
+.btn ul li:hover {
+    background-color: var(--bleue-color);
+    color: var(--white-color);
+}
+
+.descpt a {
+    text-decoration: none;
+    font-size: 11px;
+}
+
+
+/* Image de black panther dans la partie inférieure de Aside */
+.botfig img {
+    max-width: 100%
+}
+
+/* Media queries */
+@media screen and (min-width: 700px) {
+    .principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 3%;
+    }
+}
+
+/* Design de la partie formulaire */
+.form {
+    background: url('/ASSETS/Illustrations + Logo/Accueil/Pantherhome7.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.champ {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85) 15%, rgba(255, 255, 255, 0.08));
+    margin: 130px 0 75px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    position: relative;
+}
+
+.champ p,
+.champ h2 {
+    color: var(--bleue-color);
+    text-align: center;
+    font-family: 'cantarellregular';
+    margin: 0;
+}
+
+.champ h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.champ p {
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+/* Balises input et espaces de saisie du formulaire */
+.champ input {
+    width: 70%;
+    height: 40px;
+    border-radius: 38px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+}
+
+.champ input,
+.champ textarea {
+    margin: 5px 0;
+}
+
+textarea {
+    width: 70%;
+    padding: 10px 20px;
+    border-radius: 38px;
+    background-color: transparent;
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+}
+
+.champ input::placeholder,
+.champ textarea::placeholder {
+    color: var(--bleue-color);
+    font-family: 'cantarellregular';
+}
+
+/* Media queries pour petites écrans */
+@media screen and (max-width: 600px) {
+    .champ input {
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        padding: 5px 15px;
+    }
+
+    .champ textarea {
+        width: 100%;
+        border-radius: 10px;
+        padding: 5px 15px;
+    }
+}
+
+/* Bouton submit pour formulaire */
+.submitBtn a {
+    text-decoration: none;
+    display: block;
+    width: 230px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px 0;
+    cursor: pointer;
+    background-color: var(--pink-color);
+    font-family: 'cantarellregular';
+    font-size: 15px;
+    color: var(--white-color);
+    border-radius: 38px;
+    font-weight: bolder;
+}
+
+.submitBtn:hover {
+    filter: drop-shadow(0 0 10px var(--pink-color));
+}
+
+/* Pop-up */
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 8cm;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalcontent {
+    font-family: 'cantarellregular';
+    background-color: var(--pink-color);
+    text-align: center;
+    padding: 40px;
+    width: 500px;
+    max-width: 80%;
+    border-radius: 30px;
+    position: relative;
+}
+
+.modalclose {
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--white-color);
+}
+
+/* Typographie design */
+
+.contentfooter p,
+a,
+li {
+    color: var(--white-color);
+    font-family: 'cantarellregular';
+    font-size: 10px;
+    list-style: none;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+footer h3 {
+    font-family: 'cantarellregular';
+    color: var(--white-color);
+    font-size: 22px;
+    letter-spacing: 28%;
+    margin: 5px 0 10px;
+}
+
+footer {
+    background: url('/assets/Illustrations + Logo/All pages/back_footer.png') no-repeat;
+    background-size: 100% 100%;
+    border: solid 1px transparent;
+}
+
+.contentfooter {
+    margin: 200px 10% 50px;
+}
+
+/* autres design*/
+.contentfooter {
+    display: grid;
+    grid-template-areas:
+        "logo logo pages adress"
+        "logo logo pol pol";
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.imglogo {
+    width: 25vw;
+    height: 25vw;
+    min-width: 150px;
+    min-height: 150px;
+    background: url('/assets/Illustrations + Logo/All pages/footer1.png') no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.bulle {
+    position: relative;
+    right: 2vw;
+    width: 12vw;
+    min-width: 75px;
+}
+
+.imglogo:hover {
+    transform: scale(110%);
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.adress a {
+    text-decoration: none;
+}
+
+.adress img {
+    max-width: 60px;
+    margin: 0 5px;
+}
+
+.adress img:hover {
+    transform: scale(110%);
+}
+
+.pol {
+    display: flex;
+    align-items: center;
+}
+
+/* Media queries pour petites écrans */
+@media screen and (max-width: 700px) {
+    .contentfoot {
+        margin: 100px 10px 50px;
+    }
+
+    .adress figure {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    figure img {
+        width: 5vw;
+    }
+
+}
+
+/* Media Query pour très petites écrans */
+@media screen and (max-width: 400px) {
+    .contentfoot {
+        display: grid;
+        grid-template-areas:
+            "logo logo"
+            "pages adress"
+            "pol pol";
+        gap: 15px;
+    }
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.pages {
+    grid-area: pages;
+}
+
+.adress {
+    grid-area: adress;
+}
+
+.pol {
+    grid-area: pol;
+}
